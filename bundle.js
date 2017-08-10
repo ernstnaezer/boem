@@ -170,6 +170,14 @@ function splineExample(scene) {
 
     camera.lookAt(mesh.position);
 
+    var radius = 600;
+    var angle = clock.getElapsedTime() * 0.4;
+    camera.position.set(500, 0,
+    //radius * Math.cos(angle),
+    radius * Math.sin(angle)
+    //radius * Math.sin(angle)
+    );
+
     renderer.render(scene, camera);
   };
 }
